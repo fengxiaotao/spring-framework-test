@@ -920,6 +920,7 @@ public class DispatcherServlet extends FrameworkServlet {
 	 */
 	@Override
 	protected void doService(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		//todo fxt zanshi DispatcherServlet的doService
 		logRequest(request);
 
 		// Keep a snapshot of the request attributes in case of an include,
@@ -958,6 +959,7 @@ public class DispatcherServlet extends FrameworkServlet {
 		}
 
 		try {
+			//todo fxt zanshi 进入
 			doDispatch(request, response);
 		}
 		finally {
@@ -1062,6 +1064,7 @@ public class DispatcherServlet extends FrameworkServlet {
 				}
 
 				// Actually invoke the handler.
+				//todo fxt zanshi 调用handle方法 AbstractHandlerMethodAdapter
 				mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 				if (asyncManager.isConcurrentHandlingStarted()) {
